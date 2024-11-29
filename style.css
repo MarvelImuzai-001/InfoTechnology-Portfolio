@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a:first-child {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
+
+section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+#about img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+}
+
+#about div:last-child {
+    max-width: 800px;
+}
+
+#about h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #about img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #about div:last-child {
+        max-width: 100%;
+    }
+}
+
+section#project h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+.project-card-1,
+.project-card-2,
+.project-card-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card-1:hover,
+.project-card-2:hover,
+.project-card-3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-1 img,
+.project-card-2 img,
+.project-card-3 img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.project-card-1 h3,
+.project-card-2 h3,
+.project-card-3 h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #444;
+}
+
+.project-card-1 p,
+.project-card-2 p,
+.project-card-3 p {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+}
+
+.project-card-1 button,
+.project-card-2 button,
+.project-card-3 button {
+    margin-top: 12px;
+    padding: 10px 18px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-card-1 button:hover,
+.project-card-2 button:hover,
+.project-card-3 button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+#contact {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+}
