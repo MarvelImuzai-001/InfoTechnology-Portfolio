@@ -14,7 +14,7 @@ header {
     padding: 20px;
 }
 
-/* General styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -64,35 +64,29 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Media Queries */
 
-/* For iPhone 12 (375px) and smaller devices */
 @media (max-width: 375px) {
     nav a:first-child {
         font-size: 16px;
-        /* Reduce the font size for the logo or title */
+
     }
 
     nav ul li a {
         font-size: 16px;
-        /* Reduce the font size of nav links */
+
     }
 }
 
-/* For tablets and iPad screens (768px) */
 @media (max-width: 768px) {
     nav a:first-child {
         font-size: 16px;
-        /* Slightly reduce the font size for smaller tablets */
     }
 
     nav ul li a {
         font-size: 16px;
-        /* Reduce the font size of nav links */
     }
 }
 
-/* Rest of your styles (e.g., for #about, #contact, etc.) remain unchanged */
 
 section {
     max-width: 1400px;
