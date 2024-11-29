@@ -9,7 +9,6 @@ viewMoreButtons.forEach(button => {
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function(event) {
-    // Prevent form submission for validation
     event.preventDefault();
 
 
