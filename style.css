@@ -47,6 +47,36 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.cv {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .cv {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cv {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
 @media (max-width: 768px) {
     nav a:first-child {
         font-size: 16px;
@@ -82,6 +112,8 @@ nav ul li a:hover {
     #project h2 {
         font-size: 1.8em;
     }
+
+
 
     .project-grid {
         grid-template-columns: 1fr;
@@ -154,7 +186,14 @@ section {
 #project h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #333;
+}
+
+#project h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
     color: #333;
 }
 
@@ -170,11 +209,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 15px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
 }
 
 .project-card-1:hover,
@@ -187,8 +228,14 @@ section {
 .project-card-1 img,
 .project-card-2 img,
 .project-card-3 img {
-    width: 40%;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card-1 h3,
@@ -197,6 +244,7 @@ section {
     margin: 10px 0;
     font-size: 1.5em;
     color: #444;
+    text-align: center;
 }
 
 .project-card-1 p,
@@ -205,6 +253,7 @@ section {
     font-size: 1em;
     color: #666;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .project-card-1 button,
@@ -219,6 +268,8 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 200px;
 }
 
 .project-card-1 button:hover,
@@ -228,58 +279,78 @@ section {
     transform: scale(1.05);
 }
 
+
+@media (max-width: 600px) {
+
+    .project-card-1,
+    .project-card-2,
+    .project-card-3 {
+        padding: 10px;
+    }
+
+    .project-card-1 img,
+    .project-card-2 img,
+    .project-card-3 img {
+        max-width: 100%;
+    }
+
+    .project-card-1 button,
+    .project-card-2 button,
+    .project-card-3 button {
+        width: 100%;
+    }
+}
+
+.project-card-1 a,
+.project-card-2 a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 #contact {
-    background-color: #f4f4f4;
-    padding: 40px 20px;
     text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 #contact h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-form {
+.contact-icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+.contact-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-form input:focus,
-form textarea:focus {
-    border-color: #007BFF;
-    outline: none;
+.contact-icons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
 }
 
-form textarea {
-    height: 120px;
-    resize: none;
+@media (max-width: 768px) {
+    .contact-icons a {
+        font-size: 1.8rem;
+    }
 }
 
-form input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 12px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #0056b3;
+@media (max-width: 480px) {
+    .contact-icons a {
+        font-size: 1.5rem;
+    }
 }

@@ -35,4 +35,11 @@ form.addEventListener('submit', function(event) {
         header.scrollIntoView({ behavior: 'smooth' });
     }, 100); 
 });
+function handleCV() {
+            const cvUrl = 'Marvelimuzai.pdf';
+            const link = document.createElement('a');
+            link.href = cvUrl;
+            link.download = 'Marvel_Imuzai_CV.pdf'; 
+            link.click();
+        }
 
